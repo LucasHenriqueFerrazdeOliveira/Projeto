@@ -1,0 +1,161 @@
+
+body {
+  background: url("imagem.jpg");
+  font-family: "Lora", serif;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  margin: 0;
+}
+
+#container {
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 4rem;
+  gap: 3rem;
+}
+
+h1{
+    width: 800px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 80px;
+    color: white;
+    background-color: rgb(235,231,231,0.43);
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 50px;
+    font-weight: 700;
+    padding: 0.5em 0;
+    box-shadow: 5px 4px 4px black;
+}
+.cartao {
+  margin: 1rem 1rem;
+  height: 20rem;
+  flex-grow: 1;
+  flex-basis: calc(33% - 6rem);
+}
+
+.cartaoconteudo {
+  background-color: rgb(225,250,225);
+  text-align: center;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 300ms ease-in-out;
+  border-radius: 500px;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.cartaoconteudo h3 {
+  color: black;
+  border: 1px solid white;
+  box-shadow: 5px 4px 4px rgba(0, 0, 0, 0.25);
+  text-align: left;
+  padding: 0.5rem;
+  padding-top: 0px;
+  position: absolute;
+  margin: 0.6rem;
+  border-radius: 0.6rem;
+  font-size: 1vw;
+  backface-visibility: hidden;
+  font-family: "Lora", serif;
+}
+
+.cartaoconteudo p {
+  margin-top: 1rem;
+  padding: 2rem;
+  margin-top: 4rem;
+  font-size: 1.4vw;
+  padding-top: 0px;
+}
+
+.pergunta p {
+  color: black;
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.resposta p {
+  color: black;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cartao.active .cartaoconteudo {
+  transform: rotateY(180deg);
+}
+
+.pergunta,
+.resposta {
+  backface-visibility: hidden;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.resposta {
+  transform: rotateY(180deg);
+  background-color: rgb(225,250,225);
+  border-radius:500px;
+}
+
+footer {
+  background-color: transparent;
+  color: black;
+  background-color: rgba(161,253,161,0.32);
+  text-align: center;
+  font-weight: 700;
+  padding: 0.5em 0;
+  box-shadow: 5px 4px 4px gray;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2rem;
+  font-family: "Bokor", system-ui;
+  padding-bottom: 20px;
+  margin: 0;
+}
+
+footer p {
+  text-align: center;
+  font-size: 0.6rem;
+  margin-top: 0.5rem;
+  font-size: 25px;
+}
+
+footer a{
+  text-decoration: none;
+  color: blue;
+}
+
+footer a:hover{
+  text-decoration: underline;
+  color: green;
+}
+@media (max-width: 560px) {
+  
+  h1{
+    width: 100%;
+    text-align: center;
+    font-size: 5vw; 
+  }
+  .cartao {
+      flex: 1 0 calc(100% - 1rem)
+  }
+
+  .cartaoconteudo h3 {
+      font-size: 3vw;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cartaoconteudo p {
+      font-size: 5vw;
+  }
+  footer p{
+    max-width: 100%;
+    font-size: 5.5vw;
+  }
+}
